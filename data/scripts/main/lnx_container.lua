@@ -1,5 +1,10 @@
 local containers = require("containers")
 
+local storable = {
+	["pocketwatch_dismantler"] = GetModConfigData("clock_tools"),
+	["pocketwatch_parts"] = GetModConfigData("time_pieces")
+}
+
 local params = {
 	pocketwatchpack = {
 		widget = {
@@ -21,7 +26,8 @@ end
 
 
 function params.pocketwatchpack.itemtestfn(container, item, slot)
-	return (item:HasTag("pocketwatch") or (item.prefab == "pocketwatch_parts" or item.prefab == "pocketwatch_dismantler"))
+	if (item:HasTag("pocketwatch")) then return true end
+	return storable[item.prefab] == true
 end 
 
 

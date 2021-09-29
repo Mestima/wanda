@@ -34,5 +34,25 @@ configuration_options = {
 			{ description = "中文", data = "chi" },
 		},
 		default = "eng"
+	},
+	{
+		name = "clock_tools",
+		label = "Clockmaker's Tools storable",
+		hover = "Can store Clockmaker's Tools or not",
+		options = {
+			{ description = "you can", data = true },
+			{ description = "you can't", data = false }
+		},
+		default = true
+	},
+	{
+		name = "time_pieces",
+		label = "Time Pieces storable",
+		hover = "Can store Time Pieces or not",
+		options = {
+			{ description = "you can", data = true },
+			{ description = "you can't", data = false }
+		},
+		default = true
 	}
 }
