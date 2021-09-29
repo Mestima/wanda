@@ -25,6 +25,7 @@ This mod was originally created by [非自然对数㏑x](https://steamcommunity.
 - English
 - Russian (Русский)
 - Chinese (中文)
+- Portuguese ( thx [Gioga](https://steamcommunity.com/profiles/76561198240723100) )
 
 ### Contribute
 Feel free to fork it and make a pull requests. If you can improve anything or you can translate it to another one language, you are welcome!
