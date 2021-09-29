@@ -5,6 +5,7 @@
 This mod was originally created by [非自然对数㏑x](https://steamcommunity.com/profiles/76561198430346404). I've rewrite a code to make it clear and added a few features listed below.
 
 # An alternative version of Wanda's pocket watch bag!
+[Here is a Steam Workshop link](https://steamcommunity.com/sharedfiles/filedetails/?id=2614109454) <-- click it <3
 
 ### New features
 
