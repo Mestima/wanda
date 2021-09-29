@@ -9,8 +9,8 @@ This mod was originally created by [非自然对数㏑x](https://steamcommunity.
 
 ### New features
 
-- now you can put Clockmaker's Tools into watch bag
-- now you can put Time Pieces into watch bag
+- now you can put Clockmaker's Tools into watch bag (can be disabled)
+- now you can put Time Pieces into watch bag (can be disabled)
 - now you can configurate mod language at the mod settings
 - now you can use "Wanda's bag" as a server mods filter
 

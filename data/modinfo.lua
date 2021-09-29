@@ -1,7 +1,7 @@
 name = "Wanda's pocket watch bag (advanced)"
 description = "An advanced version of Wanda's pocket watch bag"
 author = "非自然对数㏑x & Mestima"
-version = "1.0.0"
+version = "1.0.1"
 
 forumthread = ""
 
