@@ -32,6 +32,7 @@ configuration_options = {
 			{ description = "English", data = "eng" },
 			{ description = "Русский", data = "ru" },
 			{ description = "中文", data = "chi" },
+			{ description = "Português", data = "pt" }
 		},
 		default = "eng"
 	},

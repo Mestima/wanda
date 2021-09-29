@@ -26,6 +26,11 @@ local lang = {
 		name = "怀表工具袋",
 		desc = "收纳时间",
 		insp = "蕴含暗影的力量"
+	},
+	pt = { -- thx to Gioga ( https://steamcommunity.com/profiles/76561198240723100 )
+		name = "Bolsa dos relógios",
+		desc = "Uma bolsa para seus relógios!",
+		insp = "Ele contém o poder das sombras..."
 	}
 }
 
