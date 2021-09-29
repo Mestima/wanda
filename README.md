@@ -13,10 +13,11 @@ This mod was originally created by [非自然对数㏑x](https://steamcommunity.
 - now you can put Time Pieces into watch bag
 - now you can configurate mod language at the mod settings
 
-### Todo list
+### ToDo list
 
 - add more translations
 - add hotkeys to use clocks directly from a bag by just a key press
+- auto drop Second Chance Watch from the bag when Wanda dies
 
 ### Supported languages
 
