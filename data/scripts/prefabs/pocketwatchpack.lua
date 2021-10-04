@@ -5,24 +5,21 @@ local assets = {
 
 local prefabs = {}
 
-
 local function onopen(inst)
 end
 
 local function onclose(inst)
---[[
-	local owner = inst.components.inventoryitem.owner
-	if owner then
-		local container = owner.components.inventory:GetOverflowContainer()
-		if container then
+	local owner = inst and inst.components and inst.components.inventoryitem and inst.components.inventoryitem.owner or nil
+	if owner ~= nil then
+		local container = owner and owner.components and owner.components.inventory and owner.components.inventory:GetOverflowContainer() or nil
+		if container ~= nil then
 			container:Open(owner)
 		end
 	end
---]]
 end
 
 local function ondropped(inst)
-	if inst.components.container then
+	if inst.components.container ~= nil then
 		inst.components.container:Close()
 	end
 end
@@ -61,7 +58,7 @@ local function fn()
 	inst:AddComponent("container")
 	inst.components.container:WidgetSetup("pocketwatchpack")
 	--inst.components.container.onopenfn = onopen
-	--inst.components.container.onclosefn = onclose
+	inst.components.container.onclosefn = onclose
 	
 	MakeHauntableLaunchAndDropFirstItem(inst)
 
