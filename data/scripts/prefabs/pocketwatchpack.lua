@@ -10,6 +10,7 @@ local function onopen(inst)
 end
 
 local function onclose(inst)
+--[[
 	local owner = inst.components.inventoryitem.owner
 	if owner then
 		local container = owner.components.inventory:GetOverflowContainer()
@@ -17,14 +18,15 @@ local function onclose(inst)
 			container:Open(owner)
 		end
 	end
+--]]
 end
-
 
 local function ondropped(inst)
 	if inst.components.container then
 		inst.components.container:Close()
 	end
 end
+
 local function fn()
 	local inst = CreateEntity()
 	inst.entity:AddTransform()
@@ -59,7 +61,7 @@ local function fn()
 	inst:AddComponent("container")
 	inst.components.container:WidgetSetup("pocketwatchpack")
 	--inst.components.container.onopenfn = onopen
-	inst.components.container.onclosefn = onclose
+	--inst.components.container.onclosefn = onclose
 	
 	MakeHauntableLaunchAndDropFirstItem(inst)
 
