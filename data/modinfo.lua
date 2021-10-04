@@ -23,6 +23,12 @@ priority = 0
 
 server_filter_tags = {"Wanda's bag"}
 
+local keys = {
+	"None",
+	"A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z",
+	"LSHIFT","LALT","LCTRL","TAB","BACKSPACE","PERIOD","SLASH","TILDE"
+}
+
 configuration_options = {
 	{
 		name = "lang",
@@ -55,5 +61,45 @@ configuration_options = {
 			{ description = "you can't", data = false }
 		},
 		default = true
+	},
+	{
+		name = "key_binds",
+		label = "Enable Keybinds",
+		hover = "Enable Wanda's Keybinds or not",
+		options = {
+			{ description = "enable", data = true },
+			{ description = "disable", data = false }
+		},
+		default = true
+	},
+	{
+		name = "ageless_key",
+		label = "Ageless watch Keybind",
+		hover = "Use available Ageless Watch with...",
+		options = {},
+		default = "X"
+	},
+	{
+		name = "backstep_key",
+		label = "Backstep watch Keybind",
+		hover = "Use available Backstep Watch with...",
+		options = {},
+		default = "Z"
+	},
+	{
+		name = "backtrek_key",
+		label = "Backtrek watch Keybind",
+		hover = "Use available Backtrek Watch with...",
+		options = {},
+		default = "C"
 	}
 }
+
+local function filltable(tbl)
+	for i=1, #keys do
+		tbl[i] = {description = keys[i], data = keys[i]}
+	end
+end
+filltable(configuration_options[5].options)
+filltable(configuration_options[6].options)
+filltable(configuration_options[7].options)
