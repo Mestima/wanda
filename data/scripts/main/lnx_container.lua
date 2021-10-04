@@ -26,7 +26,7 @@ end
 
 
 function params.pocketwatchpack.itemtestfn(container, item, slot)
-	if (item:HasTag("pocketwatch")) then return true end
+	if item:HasTag("pocketwatch") then return true end
 	return storable[item.prefab] == true
 end 
 
