@@ -32,7 +32,7 @@ end
 
 
 for k, v in pairs(params) do
-	containers.MAXITEMSLOTS = math.max(containers.MAXITEMSLOTS, v.widget.slotpos and #v.widget.slotpos or 0)
+	containers.MAXITEMSLOTS = math.max(containers.MAXITEMSLOTS, v.widget.slotpos ~= nil and #v.widget.slotpos or 0)
 end
 
 
