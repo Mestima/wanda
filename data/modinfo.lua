@@ -1,27 +1,19 @@
-name = "Wanda's pocket watch bag (advanced)"
-description = "An advanced version of Wanda's pocket watch bag"
-author = "非自然对数㏑x & Mestima"
-version = "1.0.3"
-
+name = "Reliable Wanda (bundle)"
+description = "A bundle of modifications that makes Wanda more reliable"
+author = "Mestima"
+version = "1.1.1"
 forumthread = ""
-
 api_version = 6
 api_version_dst = 10
-
 dst_compatible = true
-
 dont_starve_compatible = false
 reign_of_giants_compatible = false
 shipwrecked_compatible = false
-
 all_clients_require_mod = true
-
 icon_atlas = "images/modicon_pocketwatchpack.xml"
 icon = "modicon_pocketwatchpack.tex"
-
 priority = 0
-
-server_filter_tags = {"Wanda's bag"}
+server_filter_tags = {"Reliable Wanda"}
 
 local keys = {
 	"None",
@@ -100,6 +92,7 @@ local function filltable(tbl)
 		tbl[i] = {description = keys[i], data = keys[i]}
 	end
 end
-filltable(configuration_options[5].options)
-filltable(configuration_options[6].options)
-filltable(configuration_options[7].options)
+
+for i=5,7 do
+	filltable(configuration_options[i].options)
+end
