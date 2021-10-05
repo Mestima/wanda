@@ -111,7 +111,7 @@ Assets = {
 	Asset("ATLAS", "images/inventoryimages/pocketwatchpack.xml")
 }
 
-modimport("scripts/main/lnx_container.lua")
+modimport("scripts/main/watch_container.lua")
 AddRecipe("pocketwatchpack",
 	{
 		Ingredient("pocketwatch_dismantler", 1),
