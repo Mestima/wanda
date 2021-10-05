@@ -6,41 +6,48 @@ local backstepkey = GetModConfigData("backstep_key")
 local backtrekkey = GetModConfigData("backtrek_key")
 local keybinds = GetModConfigData("key_binds")
 
+local allActions = {
+	ageless = { key = agelesskey, prefab = "pocketwatch_heal" },
+	backstep = { key = backstepkey, prefab = "pocketwatch_warp" },
+	backtrek = { key = backtrekkey, prefab = "pocketwatch_recall" }
+}
+
 local function IsInGameplay()
 	return G.ThePlayer ~= nil and G.TheFrontEnd:GetActiveScreen().name == "HUD"
 end
 
 local function GetWatch(watchType)
-	if keybinds ~= true then return end
+	if (keybinds ~= true) then return end
 	local items = G.ThePlayer.replica.inventory:GetItems()
 	local backpack = G.ThePlayer.replica.inventory:GetEquippedItem(G.EQUIPSLOTS.BODY)
 	local watchbag = nil
 	for k, v in pairs(items) do
-		if v.prefab == "pocketwatchpack" then
+		if (v.prefab == "pocketwatchpack") then
 			watchbag = v
+			break
 		end
 	end
-	local watchbagitems = watchbag and watchbag.replica.container and watchbag.replica.container:GetItems() or nil
+	local bagitems = watchbag and watchbag.replica.container and watchbag.replica.container:GetItems() or nil
 	local packitems = backpack and backpack.replica.container and backpack.replica.container:GetItems() or nil
 	local watch = nil
 	for k, v in pairs(items) do
-		if v.prefab == watchType and v:HasTag("pocketwatch_inactive") then
+		if (v.prefab == watchType and v:HasTag("pocketwatch_inactive")) then
 			watch = v
 			break
 		end
 	end
-	if watch ~= nil or (packitems == nil and watchbagitems == nil) then return watch end
+	if (watch ~= nil or (packitems == nil and bagitems == nil)) then return watch end
 	if (packitems ~= nil) then
 		for k, v in pairs(packitems) do
-			if v.prefab == watchType and v:HasTag("pocketwatch_inactive") then
+			if (v.prefab == watchType and v:HasTag("pocketwatch_inactive")) then
 				watch = v
 				break
 			end
 		end
 	end
-	if watch ~= nil or watchbagitems == nil then return watch end
-	for k, v in pairs(watchbagitems) do
-		if v.prefab == watchType and v:HasTag("pocketwatch_inactive") then
+	if (watch ~= nil) then return watch end
+	for k, v in pairs(bagitems) do
+		if (v.prefab == watchType and v:HasTag("pocketwatch_inactive")) then
 			watch = v
 			break
 		end
@@ -48,75 +55,29 @@ local function GetWatch(watchType)
 	return watch
 end
 
-if agelesskey ~= "None" then
-	if keybinds == true then
-		local keybind = G["KEY_"..agelesskey]
-		G.TheInput:AddKeyDownHandler(keybind, function()
-			if not IsInGameplay() then return end
-			local pocketwatch = GetWatch("pocketwatch_heal")
-			if pocketwatch == nil or not G.ThePlayer:HasTag("pocketwatchcaster") then return end
-			act = G.ACTIONS.CAST_POCKETWATCH
-			local buffact = G.BufferedAction(G.ThePlayer, target, act, pocketwatch)
-			if not G.TheWorld.ismastersim then
-				local function cb()
-					G.SendRPCToServer(G.RPC.ControllerUseItemOnSelfFromInvTile, act.code, pocketwatch, target)
+if (keybinds == true) then
+	for k, v in pairs(allActions) do
+		if (v.key ~= "None") then
+			local keybind = G["KEY_" .. v.key]
+			G.TheInput:AddKeyDownHandler(keybind, function()
+				if (not IsInGameplay()) then return end
+				local pocketwatch = GetWatch(v.prefab)
+				if (pocketwatch == nil or not G.ThePlayer:HasTag("pocketwatchcaster")) then return end
+				local act = G.ACTIONS.CAST_POCKETWATCH
+				local buffact = G.BufferedAction(G.ThePlayer, target, act, pocketwatch)
+				if (not G.TheWorld.ismastersim) then
+					local function cb()
+						G.SendRPCToServer(G.RPC.ControllerUseItemOnSelfFromInvTile, act.code, pocketwatch, target)
+					end
+					if G.ThePlayer.components.locomotor then
+						buffact.preview_cb = cb
+					else
+						cb()
+					end
 				end
-				if G.ThePlayer.components.locomotor then
-					buffact.preview_cb = cb
-				else
-					cb()
-				end
-			end
-			G.ThePlayer.components.playercontroller:DoAction(buffact)
-		end)
-	end
-end
-
-if backstepkey ~= "None" then
-	if keybinds == true then
-		local keybind2 = G["KEY_"..backstepkey]
-		G.TheInput:AddKeyDownHandler(keybind2, function()
-			if not IsInGameplay() then return end
-			local pocketwatch = GetWatch("pocketwatch_warp")
-			if pocketwatch == nil or not G.ThePlayer:HasTag("pocketwatchcaster") then return end
-			act = G.ACTIONS.CAST_POCKETWATCH
-			local buffact = G.BufferedAction(G.ThePlayer, target, act, pocketwatch)
-			if not G.TheWorld.ismastersim then
-				local function cb()
-					G.SendRPCToServer(G.RPC.ControllerUseItemOnSelfFromInvTile, act.code, pocketwatch, target)
-				end
-				if G.ThePlayer.components.locomotor then
-					buffact.preview_cb = cb
-				else
-					cb()
-				end
-			end
-			G.ThePlayer.components.playercontroller:DoAction(buffact)
-		end)
-	end
-end
-
-if backtrekkey ~= "None" then
-	if keybinds == true then
-		local keybind3 = G["KEY_"..backtrekkey]
-		G.TheInput:AddKeyDownHandler(keybind3, function()
-			if not IsInGameplay() then return end
-			local pocketwatch = GetWatch("pocketwatch_recall")
-			if pocketwatch == nil or not G.ThePlayer:HasTag("pocketwatchcaster") then return end
-			act = G.ACTIONS.CAST_POCKETWATCH
-			local buffact = G.BufferedAction(G.ThePlayer, target, act, pocketwatch)
-			if not G.TheWorld.ismastersim then
-				local function cb()
-					G.SendRPCToServer(G.RPC.ControllerUseItemOnSelfFromInvTile, act.code, pocketwatch, target)
-				end
-				if G.ThePlayer.components.locomotor then
-					buffact.preview_cb = cb
-				else
-					cb()
-				end
-			end
-			G.ThePlayer.components.playercontroller:DoAction(buffact)
-		end)
+				G.ThePlayer.components.playercontroller:DoAction(buffact)
+			end)
+		end
 	end
 end
 
