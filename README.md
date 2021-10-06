@@ -3,9 +3,9 @@ This mod is an advanced bundle of [WPP](https://steamcommunity.com/sharedfiles/f
 
 ![logo](https://steamuserimages-a.akamaihd.net/ugc/1626353946162777249/6923719FBB2189665F269F7188F552F371DDDA1E/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false)
 
-![https://discord.gg/gmThRmNGeb](https://i.imgur.com/jZSGz1Z.png)
+[![Join Nilored Workshop Discord server](https://i.imgur.com/jZSGz1Z.png)](https://discord.gg/gmThRmNGeb)
 
-Feel free to join my [Discord server](https://discord.gg/gmThRmNGeb) and contact me!
+[![Steam Workshop download page](https://i.imgur.com/P1flfWC.png)](https://steamcommunity.com/sharedfiles/filedetails/?id=2614109454)
 
 # An advanced bundle of Wanda's stuff!
 
