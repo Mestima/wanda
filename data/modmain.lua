@@ -45,7 +45,7 @@ local function GetWatch(watchType)
 			end
 		end
 	end
-	if (watch ~= nil) then return watch end
+	if (watch ~= nil or bagitems == nil) then return watch end
 	for k, v in pairs(bagitems) do
 		if (v.prefab == watchType and v:HasTag("pocketwatch_inactive")) then
 			watch = v
