@@ -1,27 +1,27 @@
-[ORIGINAL MOD ARE LOCATED HERE](https://steamcommunity.com/sharedfiles/filedetails/?id=2600253880) <-- YAS! THIS IS A LINK!
-
 ## Disclaimer
+This mod is an advanced bundle of [WPP](https://steamcommunity.com/sharedfiles/filedetails/?id=2600253880) and [Wanda Keybinds](https://steamcommunity.com/sharedfiles/filedetails/?id=2597554476) with NEW FEATURES and CRASH FIXES!
 
-This mod was originally created by [非自然对数㏑x](https://steamcommunity.com/profiles/76561198430346404). I've rewrite a code to make it clear and added a few features listed below.
+![https://discord.gg/gmThRmNGeb](https://i.imgur.com/jZSGz1Z.png)
 
-# An alternative version of Wanda's pocket watch bag!
-[Here is a Steam Workshop link](https://steamcommunity.com/sharedfiles/filedetails/?id=2614109454) <-- click it <3
+Feel free to join my [Discord server](https://discord.gg/gmThRmNGeb) and contact me!
+
+# An advanced bundle of Wanda's stuff!
 
 ### New features
-
 - now you can put Clockmaker's Tools into watch bag (can be disabled)
 - now you can put Time Pieces into watch bag (can be disabled)
 - now you can configurate mod language at the mod settings
 - now you can use "Wanda's bag" as a server mods filter
+- now backpack interface will be opened automatically when the watch bag are closed or dropped
+- now you can configure and use keybinds (similar to [this mod](https://steamcommunity.com/sharedfiles/filedetails/?id=2597554476), but you can use watch in the bag by a keybind too, remove the original mod if you use this one)
+- added support for integrated backpack mode (but it's still rude)
+- improved code quality
 
 ### ToDo list
-
 - add more translations
-- add hotkeys to use clocks directly from a bag by just a key press
 - auto drop Second Chance Watch from the bag when Wanda dies
 
 ### Supported languages
-
 - English
 - Russian (Русский)
 - Chinese (中文)
