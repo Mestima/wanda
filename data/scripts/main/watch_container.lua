@@ -5,17 +5,27 @@ local storable = {
 	["pocketwatch_parts"] = GetModConfigData("time_pieces")
 }
 
+local bpMode = {
+	x = -136,
+	s = true
+}
+if (Profile:GetIntegratedBackpack()) then
+	local W, H = TheSim:GetScreenSize()
+	bpMode.x = W/2 - 130
+	bpMode.s = false
+end
+
 local params = {
 	pocketwatchpack = {
 		widget = {
 			slotpos = {},
 			animbank = "ui_piggyback_2x6",
 			animbuild = "ui_piggyback_2x6",
-			pos = Vector3(-5, -50, 0)
+			pos = Vector3(bpMode.x, -50, 0)
 		},
-		issidewidget = true,
+		issidewidget = bpMode.s,
 		openlimit = 1,
-		type = "pack"
+		type = "chest"
 	}
 }
 
