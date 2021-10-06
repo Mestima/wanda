@@ -1,6 +1,8 @@
 ## Disclaimer
 This mod is an advanced bundle of [WPP](https://steamcommunity.com/sharedfiles/filedetails/?id=2600253880) and [Wanda Keybinds](https://steamcommunity.com/sharedfiles/filedetails/?id=2597554476) with NEW FEATURES and CRASH FIXES!
 
+![logo](https://steamuserimages-a.akamaihd.net/ugc/1626353946162777249/6923719FBB2189665F269F7188F552F371DDDA1E/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false)
+
 ![https://discord.gg/gmThRmNGeb](https://i.imgur.com/jZSGz1Z.png)
 
 Feel free to join my [Discord server](https://discord.gg/gmThRmNGeb) and contact me!
