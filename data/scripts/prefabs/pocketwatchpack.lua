@@ -10,11 +10,9 @@ end
 
 local function onclose(inst)
 	local owner = inst and inst.components and inst.components.inventoryitem and inst.components.inventoryitem.owner or nil
-	if owner ~= nil then
-		local container = owner and owner.components and owner.components.inventory and owner.components.inventory:GetOverflowContainer() or nil
-		if container ~= nil then
-			container:Open(owner)
-		end
+	local container = owner and owner.components and owner.components.inventory and owner.components.inventory:GetOverflowContainer() or nil
+	if container ~= nil then
+		container:Open(owner)
 	end
 end
 
