@@ -55,6 +55,16 @@ configuration_options = {
 		default = true
 	},
 	{
+		name = "nightmarefuel",
+		label = "Nightmare Fuel storable",
+		hover = "Can store Nightmare Fuel or not",
+		options = {
+			{ description = "you can", data = true },
+			{ description = "you can't", data = false }
+		},
+		default = true
+	},
+	{
 		name = "key_binds",
 		label = "Enable Keybinds",
 		hover = "Enable Wanda's Keybinds or not",
@@ -93,6 +103,6 @@ local function filltable(tbl)
 	end
 end
 
-for i=5,7 do
+for i=6, 8 do
 	filltable(configuration_options[i].options)
 end

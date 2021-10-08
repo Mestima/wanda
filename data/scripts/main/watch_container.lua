@@ -2,7 +2,8 @@ local containers = require("containers")
 
 local storable = {
 	["pocketwatch_dismantler"] = GetModConfigData("clock_tools"),
-	["pocketwatch_parts"] = GetModConfigData("time_pieces")
+	["pocketwatch_parts"] = GetModConfigData("time_pieces"),
+	["nightmarefuel"] = GetModConfigData("nightmarefuel")
 }
 
 local bpMode = {
