@@ -12,6 +12,7 @@ This mod is an advanced bundle of [WPP](https://steamcommunity.com/sharedfiles/f
 ### New features
 - now you can put Clockmaker's Tools into watch bag (can be disabled)
 - now you can put Time Pieces into watch bag (can be disabled)
+- now you can put Nightmare Fuel into watch bag (can be disabled)
 - now you can configurate mod language at the mod settings
 - now you can use "Wanda's bag" as a server mods filter
 - now backpack interface will be opened automatically when the watch bag are closed or dropped
