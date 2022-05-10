@@ -93,7 +93,7 @@ configuration_options = {
 		label = "Backtrek watch Keybind",
 		hover = "Use available Backtrek Watch with...",
 		options = {},
-		default = "C"
+		default = "D"
 	}
 }
 
