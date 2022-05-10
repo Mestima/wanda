@@ -23,6 +23,7 @@ This mod is an advanced bundle of [WPP](https://steamcommunity.com/sharedfiles/f
 
 ### ToDo list
 - add more translations
+- create configuration to watch cooldown time
 - auto drop Second Chance Watch from the bag when Wanda dies
 
 ### Supported languages
