@@ -10,6 +10,7 @@ This mod is an advanced bundle of [WPP](https://steamcommunity.com/sharedfiles/f
 # An advanced bundle of Wanda's stuff!
 
 ### New features
+- Ageless Watch can now restore food and items freshness (can be disabled)
 - now you can put Clockmaker's Tools into watch bag (can be disabled)
 - now you can put Time Pieces into watch bag (can be disabled)
 - now you can put Nightmare Fuel into watch bag (can be disabled)
