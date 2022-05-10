@@ -81,6 +81,10 @@ if (keybinds == true) then
 	end
 end
 
+AddPrefabPostInit("pocketwatch_heal", function(inst)
+	inst.unspoil_rate = GetModConfigData("unspoil_rate")
+end)
+
 local lang = {
 	eng = {
 		name = "Watch bag",
