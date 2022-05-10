@@ -1,4 +1,4 @@
-name = "Reliable Wanda (bundle)"
+name = "Reliable Wanda [dev]"
 description = "A bundle of modifications that makes Wanda more reliable"
 author = "Mestima"
 version = "1.2.2"
