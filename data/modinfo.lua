@@ -1,7 +1,7 @@
 name = "Reliable Wanda"
 description = "A bundle of modifications that makes Wanda more reliable"
 author = "Mestima"
-version = "1.2.3"
+version = "1.2.4"
 forumthread = ""
 api_version = 6
 api_version_dst = 10
