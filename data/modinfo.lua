@@ -102,15 +102,25 @@ configuration_options = {
 		options = {
 			{ description = "none", data = 0.0 },
 			{ description = "10% (fair play)", data = 0.1 },
+			{ description = "-10% (will spoil)", data = -0.1 },
 			{ description = "20%", data = 0.2 },
+			{ description = "-20% (will spoil)", data = -0.2 },
 			{ description = "30%", data = 0.3 },
+			{ description = "-30% (will spoil)", data = -0.3 },
 			{ description = "40%", data = 0.4 },
+			{ description = "-40% (will spoil)", data = -0.4 },
 			{ description = "50%", data = 0.5 },
+			{ description = "-50% (will spoil)", data = -0.5 },
 			{ description = "60%", data = 0.6 },
+			{ description = "-60 (will spoil)%", data = -0.6 },
 			{ description = "70%", data = 0.7 },
+			{ description = "-70 (will spoil)%", data = -0.7 },
 			{ description = "80%", data = 0.8 },
+			{ description = "-80 (will spoil)%", data = -0.8 },
 			{ description = "90%", data = 0.9 },
-			{ description = "100%", data = 1.0 }
+			{ description = "-90 (will spoil)%", data = -0.9 },
+			{ description = "100%", data = 1.0 },
+			{ description = "-100% (will spoil)", data = -1.0 }
 		},
 		default = 0.1
 	}
